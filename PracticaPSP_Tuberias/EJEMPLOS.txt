@@ -1,0 +1,25 @@
+EJEMPLOS DE EJECUCIÓN
+
+1) Ejecutar todo encadenado (genera 10 números, ordena y calcula la media):
+------------------------------------------------------------------------
+javac -d out src/actividad/*.java
+java -cp out actividad.GeneradorNumeros 10 100 | java -cp out actividad.OrdenadorNumeros | java -cp out actividad.CalculaMedia
+
+Salida esperada (ejemplo):
+3
+7
+12
+26
+34
+41
+52
+63
+78
+90
+Media: 41.60
+
+2) Ejecutar y redirigir entrada desde archivo (opcional):
+-------------------------------------------------------
+java -cp out actividad.GeneradorNumeros 20 200 > numeros.txt
+java -cp out actividad.OrdenadorNumeros < numeros.txt
+java -cp out actividad.CalculaMedia < numeros.txt
